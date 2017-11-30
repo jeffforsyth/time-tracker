@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Config, IonicPage, NavController } from 'ionic-angular';
 
-import {JobService} from '../../providers/job-service-mock';
+//import {JobService} from '../../providers/job-service-mock';
+import {JobService} from '../../providers/job-service';
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ export class JobListPage {
   jobs: Array<any>;
   searchKey: string = "";
 
-  constructor(public navCtrl: NavController, public service: JobService, public config: Config) {
+  constructor(public navCtrl: NavController, public jobService: JobService, public config: Config) {
     this.findAll();
   }
 
@@ -23,7 +24,7 @@ export class JobListPage {
 
   onInput(event) {
 
-    this.service.findByName(this.searchKey)
+    this.jobService.findByName(this.searchKey)
         .then(data => {
             this.jobs = data;
         })
@@ -39,7 +40,7 @@ export class JobListPage {
   }
 
   findAll() {
-      this.service.findAll()
+      this.jobService.getJobs()
           .then(data => this.jobs = data)
           .catch(error => alert(error));
   }

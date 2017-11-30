@@ -1,10 +1,32 @@
 <ion-content padding>
+    <!-- Provide a mechanism to scroll to another Week -->
+    <!--  Lists Current Days of Week -->
     <ion-toolbar no-border-top>
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <button ion-fab mini><ion-icon name="arrow-back"></ion-icon></button>
+                    SUN
                 </ion-col>
+                <ion-col>
+                    MON
+                </ion-col>
+                <ion-col>
+                    TUE
+                </ion-col>
+                <ion-col>
+                    WED
+                </ion-col>
+                <ion-col>
+                    THU
+                </ion-col>
+                <ion-col>
+                    FRI
+                </ion-col>
+                <ion-col>
+                    SAT
+                </ion-col>
+            </ion-row>
+            <ion-row>
                 <ion-col>
                     <button ion-fab mini>22</button>
                 </ion-col>
@@ -12,7 +34,7 @@
                     <button ion-fab mini>23</button>
                 </ion-col>
                 <ion-col>
-                    <button ion-fab mini>24</button>
+                    <button ion-fab mini color="active">24</button>
                 </ion-col>
                 <ion-col>
                     <button ion-fab mini>25</button>
@@ -26,10 +48,14 @@
                 <ion-col>
                     <button ion-fab mini>28</button>
                 </ion-col>
-                <ion-col>
-                    <button ion-fab mini><ion-icon name="arrow-forward"></ion-icon></button>
-                </ion-col>
             </ion-row>
         </ion-grid>
     </ion-toolbar>
+
+    <!-- Add Each Time Entry for the selected Day -->
+
+
+    <ion-fab center bottom>
+        <button ion-fab mini color="secondary" (click)="presentPopover($event)"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
 </ion-content>

@@ -9,10 +9,12 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { TimesheetPage } from '../pages/timesheet/timesheet';
+import { TimesheetPopoverPage } from '../pages/timesheet-popover/timesheet-popover';
+
 import { AccountPage } from '../pages/account/account';
 import { JobListPage } from '../pages/job-list/job-list';
 import { TabsPage } from '../pages/tabs/tabs';
-import { JobService } from '../providers/job-service-mock';
+import { JobService } from '../providers/job-service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { JobService } from '../providers/job-service-mock';
     HomePage,
     LoginPage,
     TimesheetPage,
+    TimesheetPopoverPage,
     AccountPage,
     TabsPage,
     JobListPage
@@ -36,6 +39,7 @@ import { JobService } from '../providers/job-service-mock';
     LoginPage,
     TabsPage,
     TimesheetPage,
+    TimesheetPopoverPage,
     AccountPage,
     JobListPage
   ],
