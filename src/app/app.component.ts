@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 
+
 export interface MenuItem {
   title: string;
   component: any;
@@ -15,10 +16,11 @@ export interface MenuItem {
   templateUrl: 'app.html'
 })
 
-export class MyApp {
+export class MyApp {  
+ 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = LoginPage;
+  rootPage:any = LoginPage;  
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();    
@@ -29,7 +31,7 @@ export class MyApp {
         // Okay, so the platform is ready and our plugins are available.
         // Here you can do any higher level native things you might need.
         this.statusBar.styleLightContent();
-        this.splashScreen.hide();
+        this.splashScreen.hide();      
     });
   }
   openPage(page) {

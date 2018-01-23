@@ -83,4 +83,12 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
     <plugin name="cordova-sqlite-storage" spec="^2.1.2" />
     <plugin name="cordova-plugin-geolocation" spec="^3.0.0" />
+    <allow-navigation href="http://10.0.1.13:8100" />
+    <plugin name="cordova-plugin-ms-azure-mobile-apps" spec="^2.0.0" />
+    <allow-navigation href="http://10.146.185.119:8100" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <engine name="browser" spec="~5.0.3" />
+    <engine name="ios" spec="~4.5.4" />
+    <allow-navigation href="http://172.25.70.16:8100" />
+    <allow-navigation href="http://10.10.6.119:8100" />
 </widget>

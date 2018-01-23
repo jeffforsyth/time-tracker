@@ -53,7 +53,12 @@
     </ion-toolbar>
 
     <!-- Add Each Time Entry for the selected Day -->
+    <ion-item-group *ngFor="let day of days">
 
+        <ion-item-divider light>{{day.date}}</ion-item-divider>
+        <ion-item *ngFor="let timeEntry of day.timeEntries">{{timeEntry}}</ion-item>
+
+    </ion-item-group>
 
     <ion-fab center bottom>
         <button ion-fab mini color="secondary" (click)="presentPopover($event)"><ion-icon name="add"></ion-icon></button>

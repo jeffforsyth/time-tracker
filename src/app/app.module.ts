@@ -15,6 +15,7 @@ import { AccountPage } from '../pages/account/account';
 import { JobListPage } from '../pages/job-list/job-list';
 import { TabsPage } from '../pages/tabs/tabs';
 import { JobService } from '../providers/job-service';
+import { TodoService } from '../providers/todo-service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { JobService } from '../providers/job-service';
     StatusBar,
     SplashScreen,
     JobService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}    
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TodoService    
   ]
 })
 export class AppModule {}
